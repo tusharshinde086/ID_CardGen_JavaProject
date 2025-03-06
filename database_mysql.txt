@@ -1,0 +1,33 @@
+-- Step 1: Drop the existing database
+DROP DATABASE IF EXISTS my_database;
+
+-- Step 2: Create a new database
+CREATE DATABASE my_database;
+
+-- Step 3: Use the new database
+USE my_database;
+
+-- Step 4: Create the id_cards table
+CREATE TABLE id_cards (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    college_name1 VARCHAR(255) NOT NULL,
+    college_name2 VARCHAR(255) NOT NULL,
+    college_name3 VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    birthdate DATE NOT NULL,
+    issuedate DATE NOT NULL,
+    nic VARCHAR(20) NOT NULL,
+    mobile VARCHAR(15) NOT NULL,
+    id_no VARCHAR(50) NOT NULL,
+    class VARCHAR(50) NOT NULL,
+    roll_no VARCHAR(50) NOT NULL,
+    blood_group VARCHAR(10) NOT NULL,
+    image_path VARCHAR(255) NOT NULL
+);
+
+-- Step 5: Insert sample data (optional)
+INSERT INTO id_cards (college_name1, college_name2, college_name3, name, address, birthdate, issuedate, nic, mobile, id_no, class, roll_no, blood_group, image_path) 
+VALUES 
+('Bharatiya Jain Sanghatanais', 'Arts, Science & Commerce College', 'Pune-Nager Road, Bakuri Phata, Wagholi, Pune-412207', 
+ 'John Doe', '123 Main St, Pune', '2000-01-01', '2023-01-01', '123456789', '9876543210', 'ID123', '10th', '1', 'O+', '/path/to/image.jpg');
